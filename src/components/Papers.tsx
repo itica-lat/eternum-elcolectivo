@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion'
 import { FileText, Download, ExternalLink, Search } from 'lucide-react'
+import { fadeUp, fadeUpStagger, fadeUpItem } from '../lib/animations'
 
 const papers = [
   {
@@ -23,52 +25,78 @@ const papers = [
 
 export function Papers() {
   return (
-    <section id="papers" className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-alt/30">
+    <motion.section
+      id="papers"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-alt/30"
+    >
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <motion.div variants={fadeUp} className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">
             Papers
           </h2>
           <p className="text-text-muted max-w-2xl mx-auto text-lg">
             Documentación compartida entre equipos. Próximamente disponible.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <motion.div
+          variants={fadeUpStagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-3 gap-6"
+        >
           {papers.map(({ title, desc, type, size }) => (
-            <div
+            <motion.div
               key={title}
-              className="group p-6 rounded-2xl bg-surface border border-white/5 hover:border-primary/20 transition-all duration-300"
+              variants={fadeUpItem}
+              whileHover={{ y: -5, scale: 1.01 }}
+              className="group p-6 rounded-2xl bg-surface border border-white/5 hover:border-primary/20 transition-colors duration-300"
             >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <motion.div
+                whileHover={{ rotate: [0, -15, 15, 0], transition: { duration: 0.5 } }}
+                className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors"
+              >
                 <FileText className="w-5 h-5 text-primary" />
-              </div>
+              </motion.div>
               <h3 className="font-semibold text-text mb-2">{title}</h3>
               <p className="text-sm text-text-muted leading-relaxed mb-4">{desc}</p>
               <div className="flex items-center justify-between">
                 <span className="text-xs text-text-muted">{type} · {size}</span>
-                <span className="text-xs text-primary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <motion.span
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  className="text-xs text-primary flex items-center gap-1"
+                >
                   <Download className="w-3 h-3" />
                   Descargar
-                </span>
+                </motion.span>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="mt-12 text-center">
-          <a
+        <motion.div
+          variants={fadeUp}
+          className="mt-12 text-center"
+        >
+          <motion.a
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             href="https://github.com/itica-lat/eternum-elcolectivo"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-surface-alt text-text hover:bg-surface-alt transition-all duration-200"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-surface-alt text-text hover:bg-surface-alt transition-colors duration-200"
           >
             <Search className="w-5 h-5" />
             Explorar el repositorio
             <ExternalLink className="w-4 h-4" />
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }
