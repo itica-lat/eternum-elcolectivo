@@ -1,3 +1,5 @@
+import { Logo } from './Logo'
+
 const sections = [
   { id: 'inicio', label: 'Inicio' },
   { id: 'sobre', label: 'Sobre' },
@@ -11,10 +13,8 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-white/5">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg border border-primary flex items-center justify-center">
-            <div className="w-2 h-2 rounded-full bg-primary" />
-          </div>
+        <a href="#inicio" className="flex items-center gap-2.5 group">
+          <Logo size={36} alt />
           <span className="font-semibold text-text text-lg tracking-tight">El Colectivo</span>
         </a>
 
