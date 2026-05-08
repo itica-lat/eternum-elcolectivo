@@ -1,12 +1,17 @@
 {
   "name": "el-colectivo",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky",
+    "lint": "oxlint .",
+    "format": "oxfmt .",
+    "format-check": "oxfmt --check .",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
@@ -20,6 +25,9 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^4.2.2",
+    "husky": "^9.1.7",
+    "oxfmt": "^0.48.0",
+    "oxlint": "^1.63.0",
     "typescript": "~5.9.3",
     "vite": "^7.3.1"
   }

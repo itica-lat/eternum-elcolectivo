@@ -2,9 +2,9 @@
 
 @theme {
   --color-surface: #222831;
-  --color-surface-alt: #393E46;
-  --color-primary: #32E0C4;
-  --color-text: #EEEEEE;
+  --color-surface-alt: #393e46;
+  --color-primary: #32e0c4;
+  --color-text: #eeeeee;
   --color-text-muted: #9ca3af;
 
   --font-sans: "DM Sans", sans-serif;
@@ -41,12 +41,19 @@ button {
   @apply cursor-pointer transition-colors duration-300;
 }
 
-p, h1, h2, h3, h4, h5, h6, a {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
   @apply select-none;
 }
 
 .contact-way-value {
-  @apply select-text
+  @apply select-text;
 }
 
 .animate-fade-up {

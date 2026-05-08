@@ -1,15 +1,18 @@
-import { motion } from 'framer-motion'
-import { BookOpen, Users, GitBranch } from 'lucide-react'
+import { motion } from "framer-motion";
+import { BookOpen, Users, GitBranch } from "lucide-react";
 
 export function Hero() {
   return (
-    <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="inicio"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Grid background */}
       <motion.div
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `linear-gradient(#32E0C4 1px, transparent 1px), linear-gradient(90deg, #32E0C4 1px, transparent 1px)`,
-          backgroundSize: '60px 60px',
+          backgroundSize: "60px 60px",
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.03 }}
@@ -42,7 +45,8 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.35, ease: [0.42, 0, 0.58, 1] }}
           className="text-lg sm:text-xl text-text-muted leading-relaxed mb-10 max-w-xl mx-auto"
         >
-          Un espacio donde los equipos del proyecto SGRSI 2026 documentan errores, decisiones técnicas y procesos de razonamiento. No soluciones. Registro de cómo se llegó a ellas.
+          Un espacio donde los equipos del proyecto SGRSI 2026 documentan errores, decisiones
+          técnicas y procesos de razonamiento. No soluciones. Registro de cómo se llegó a ellas.
         </motion.p>
 
         <motion.div
@@ -70,5 +74,5 @@ export function Hero() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

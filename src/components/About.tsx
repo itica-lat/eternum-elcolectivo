@@ -1,24 +1,24 @@
-import { motion } from 'framer-motion'
-import { Lightbulb, Shield, Users } from 'lucide-react'
-import { fadeUp, fadeUpStagger, fadeUpItem } from '../lib/animations'
+import { motion } from "framer-motion";
+import { Lightbulb, Shield, Users } from "lucide-react";
+import { fadeUp, fadeUpStagger, fadeUpItem } from "../lib/animations";
 
 const highlights = [
   {
     icon: Lightbulb,
-    title: 'Qué es',
-    text: 'Una red de documentación colectiva entre equipos. Cada contribución queda atribuida al equipo que la generó, con marca de tiempo y sin edición retroactiva posible.',
+    title: "Qué es",
+    text: "Una red de documentación colectiva entre equipos. Cada contribución queda atribuida al equipo que la generó, con marca de tiempo y sin edición retroactiva posible.",
   },
   {
     icon: Users,
-    title: 'Por qué se creó',
-    text: 'Para que ningún equipo enfrente solo los mismos problemas. Lo que un equipo descubre hoy, queda disponible para todos mañana. El conocimiento circula, los entregables no.',
+    title: "Por qué se creó",
+    text: "Para que ningún equipo enfrente solo los mismos problemas. Lo que un equipo descubre hoy, queda disponible para todos mañana. El conocimiento circula, los entregables no.",
   },
   {
     icon: Shield,
-    title: 'Gobernanza',
-    text: 'Las decisiones de acceso y moderación se toman por votación entre los coordinadores de todos los grupos activos. El nivel de participación depende de contribución medible.',
+    title: "Gobernanza",
+    text: "Las decisiones de acceso y moderación se toman por votación entre los coordinadores de todos los grupos activos. El nivel de participación depende de contribución medible.",
   },
-]
+];
 
 export function About() {
   return (
@@ -31,9 +31,7 @@ export function About() {
     >
       <div className="max-w-6xl mx-auto">
         <motion.div variants={fadeUp} className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">
-            Sobre El Colectivo
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">Sobre El Colectivo</h2>
           <p className="text-text-muted max-w-2xl mx-auto text-lg">
             BT Informática 2026 · El Colectivo · Eternum
           </p>
@@ -67,5 +65,5 @@ export function About() {
         </motion.div>
       </div>
     </motion.section>
-  )
+  );
 }

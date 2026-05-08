@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
-import { Mail, GitBranch, MapPin, Send } from 'lucide-react'
-import { fadeUp, fadeUpStagger, fadeUpItem } from '../lib/animations'
+import { motion } from "framer-motion";
+import { Mail, GitBranch, MapPin, Send } from "lucide-react";
+import { fadeUp, fadeUpStagger, fadeUpItem } from "../lib/animations";
 
 export function Contact() {
   return (
@@ -20,22 +20,22 @@ export function Contact() {
             >
               Contacto
             </motion.h2>
-            <motion.p
-              variants={fadeUpItem}
-              className="text-text-muted leading-relaxed mb-8"
-            >
-              ¿Querés sumar tu equipo a El Colectivo? Escribinos. Las decisiones de
-              acceso se toman por votación entre los coordinadores de todos los grupos activos.
+            <motion.p variants={fadeUpItem} className="text-text-muted leading-relaxed mb-8">
+              ¿Querés sumar tu equipo a El Colectivo? Escribinos. Las decisiones de acceso se toman
+              por votación entre los coordinadores de todos los grupos activos.
             </motion.p>
 
-            <motion.div
-              variants={fadeUpStagger}
-              className="space-y-4"
-            >
+            <motion.div variants={fadeUpStagger} className="space-y-4">
               {[
-                { icon: Mail, label: 'Email', type: 'email', value: 'colectivo@eternum.lat' },
-                { icon: GitBranch, label: 'GitHub', type: 'url', value: 'https://github.com/itica-lat/eternum-elcolectivo', display: 'github.com/itica-lat/eternum-elcolectivo' },
-                { icon: MapPin, label: 'Ubicación', type: 'text', value: 'Montevideo · Uruguay' },
+                { icon: Mail, label: "Email", type: "email", value: "colectivo@eternum.lat" },
+                {
+                  icon: GitBranch,
+                  label: "GitHub",
+                  type: "url",
+                  value: "https://github.com/itica-lat/eternum-elcolectivo",
+                  display: "github.com/itica-lat/eternum-elcolectivo",
+                },
+                { icon: MapPin, label: "Ubicación", type: "text", value: "Montevideo · Uruguay" },
               ].map(({ icon: Icon, label, type, value, display }) => (
                 <motion.div
                   key={label}
@@ -43,15 +43,13 @@ export function Contact() {
                   whileHover={{ x: 4 }}
                   className="flex items-center gap-3"
                 >
-                  <motion.div
-                    className="w-9 h-9 rounded-lg bg-surface-alt flex items-center justify-center shrink-0"
-                  >
+                  <motion.div className="w-9 h-9 rounded-lg bg-surface-alt flex items-center justify-center shrink-0">
                     <Icon className="w-4 h-4 text-primary" />
                   </motion.div>
-                  <div className='contact-way'>
+                  <div className="contact-way">
                     <p className="text-xs text-text-muted">{label}</p>
                     <a
-                      href={type === 'email' ? `mailto:${value}` : value}
+                      href={type === "email" ? `mailto:${value}` : value}
                       target="_blank"
                       rel="noopener noreferrer"
                       data-utm-source="colectivo-website"
@@ -74,13 +72,10 @@ export function Contact() {
             className="space-y-4 p-6 rounded-2xl bg-surface-alt/50 border border-white/5"
           >
             {[
-              { id: 'name', label: 'Nombre', type: 'text', placeholder: 'Tu nombre o equipo' },
-              { id: 'email', label: 'Email', type: 'email', placeholder: 'tu@email.com' },
+              { id: "name", label: "Nombre", type: "text", placeholder: "Tu nombre o equipo" },
+              { id: "email", label: "Email", type: "email", placeholder: "tu@email.com" },
             ].map(({ id, label, type, placeholder }) => (
-              <motion.div
-                key={id}
-                whileFocus={{ scale: 1.01 }}
-              >
+              <motion.div key={id} whileFocus={{ scale: 1.01 }}>
                 <label htmlFor={id} className="block text-sm font-medium text-text mb-1.5">
                   {label}
                 </label>
@@ -116,5 +111,5 @@ export function Contact() {
         </div>
       </div>
     </motion.section>
-  )
+  );
 }

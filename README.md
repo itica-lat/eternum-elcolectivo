@@ -19,12 +19,14 @@ Cada contribución queda atribuida al equipo que la generó, con marca de tiempo
 ## Lo que circula / lo que no circula
 
 **Permitido**
+
 - Razonamientos y decisiones de diseño
 - Errores encontrados y cómo se resolvieron
 - Preguntas técnicas abiertas
 - Ideas sobre arquitectura o proceso
 
 **No permitido**
+
 - Entregables parciales o completos
 - Diagramas UML, ER o de clases
 - Fragmentos de código del proyecto
@@ -34,14 +36,14 @@ Cada contribución queda atribuida al equipo que la generó, con marca de tiempo
 
 ## Equipos participantes
 
-| Equipo | Rol |
-|---|---|
-| Eternum | Fundador · Administrador de la organización |
-| DataMiners | Participante |
-| Nexus | Participante |
-| TechFlow Solutions | Participante |
-| PixelMind | Participante |
-| InfoSquad | Participante |
+| Equipo             | Rol                                         |
+| ------------------ | ------------------------------------------- |
+| Eternum            | Fundador · Administrador de la organización |
+| DataMiners         | Participante                                |
+| Nexus              | Participante                                |
+| TechFlow Solutions | Participante                                |
+| PixelMind          | Participante                                |
+| InfoSquad          | Participante                                |
 
 ---
 
@@ -66,4 +68,4 @@ fue discutida originalmente por el equipo Nexus en [enlace a la Discussion]."
 
 ---
 
-*Eternum · BT Informática 2026 · El Colectivo*
+_Eternum · BT Informática 2026 · El Colectivo_

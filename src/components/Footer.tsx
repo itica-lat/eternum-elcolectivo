@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
-import { BookOpen, Heart } from 'lucide-react'
-import { fadeUp, fadeUpStagger, fadeUpItem } from '../lib/animations'
+import { motion } from "framer-motion";
+import { BookOpen, Heart } from "lucide-react";
+import { fadeUp, fadeUpStagger, fadeUpItem } from "../lib/animations";
 
 export function Footer() {
   return (
@@ -11,10 +11,7 @@ export function Footer() {
       className="border-t border-white/5 py-12 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          variants={fadeUpStagger}
-          className="grid md:grid-cols-3 gap-8 mb-8"
-        >
+        <motion.div variants={fadeUpStagger} className="grid md:grid-cols-3 gap-8 mb-8">
           <motion.div variants={fadeUpItem}>
             <div className="flex items-center gap-2 mb-3">
               <div className="w-6 h-6 rounded flex items-center justify-center">
@@ -33,9 +30,12 @@ export function Footer() {
             </h4>
             <ul className="space-y-2">
               {[
-                { label: 'GitHub', href: 'https://github.com/itica-lat/eternum-elcolectivo' },
-                { label: 'Discussions', href: 'https://github.com/itica-lat/eternum-elcolectivo/discussions' },
-                { label: 'Eternum', href: 'https://eternum.lat' },
+                { label: "GitHub", href: "https://github.com/itica-lat/eternum-elcolectivo" },
+                {
+                  label: "Discussions",
+                  href: "https://github.com/itica-lat/eternum-elcolectivo/discussions",
+                },
+                { label: "Eternum", href: "https://eternum.lat" },
               ].map(({ label, href }) => (
                 <motion.li key={label} whileHover={{ x: 3 }}>
                   <a
@@ -52,11 +52,9 @@ export function Footer() {
           </motion.div>
 
           <motion.div variants={fadeUpItem}>
-            <h4 className="text-xs font-semibold text-text uppercase tracking-wider mb-3">
-              Legal
-            </h4>
+            <h4 className="text-xs font-semibold text-text uppercase tracking-wider mb-3">Legal</h4>
             <p className="text-xs text-text-muted leading-relaxed mb-2">
-              Todo el contenido está bajo licencia{' '}
+              Todo el contenido está bajo licencia{" "}
               <a
                 href="https://creativecommons.org/licenses/by-sa/4.0/"
                 target="_blank"
@@ -90,5 +88,5 @@ export function Footer() {
         </motion.div>
       </div>
     </motion.footer>
-  )
+  );
 }

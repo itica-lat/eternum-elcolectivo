@@ -1,13 +1,13 @@
-import { Logo } from './Logo'
+import { Logo } from "./Logo";
 
 const sections = [
-  { id: 'inicio', label: 'Inicio' },
-  { id: 'sobre', label: 'Sobre' },
-  { id: 'proyectos', label: 'Proyectos' },
-  { id: 'charla', label: 'Charla' },
-  { id: 'papers', label: 'Papers' },
-  { id: 'contacto', label: 'Contacto' },
-] as const
+  { id: "inicio", label: "Inicio" },
+  { id: "sobre", label: "Sobre" },
+  { id: "proyectos", label: "Proyectos" },
+  { id: "charla", label: "Charla" },
+  { id: "papers", label: "Papers" },
+  { id: "contacto", label: "Contacto" },
+] as const;
 
 export function Header() {
   return (
@@ -40,5 +40,5 @@ export function Header() {
         </a>
       </nav>
     </header>
-  )
+  );
 }

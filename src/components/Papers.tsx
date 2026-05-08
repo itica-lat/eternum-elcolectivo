@@ -1,27 +1,27 @@
-import { motion } from 'framer-motion'
-import { FileText, Download, ExternalLink, Search } from 'lucide-react'
-import { fadeUp, fadeUpStagger, fadeUpItem } from '../lib/animations'
+import { motion } from "framer-motion";
+import { FileText, Download, ExternalLink, Search } from "lucide-react";
+import { fadeUp, fadeUpStagger, fadeUpItem } from "../lib/animations";
 
 const papers = [
   {
-    title: 'Registro de decisiones técnicas',
-    desc: 'Metodología para documentar decisiones de diseño y arquitectura entre equipos.',
-    type: 'PDF',
-    size: '—',
+    title: "Registro de decisiones técnicas",
+    desc: "Metodología para documentar decisiones de diseño y arquitectura entre equipos.",
+    type: "PDF",
+    size: "—",
   },
   {
-    title: 'Errores frecuentes y resoluciones',
-    desc: 'Compilación de errores encontrados durante el desarrollo y cómo se resolvieron.',
-    type: 'PDF',
-    size: '—',
+    title: "Errores frecuentes y resoluciones",
+    desc: "Compilación de errores encontrados durante el desarrollo y cómo se resolvieron.",
+    type: "PDF",
+    size: "—",
   },
   {
-    title: 'Guía de participación',
-    desc: 'Cómo contribuir a El Colectivo: qué circula, qué no, y cómo atribuir correctamente.',
-    type: 'Markdown',
-    size: '—',
+    title: "Guía de participación",
+    desc: "Cómo contribuir a El Colectivo: qué circula, qué no, y cómo atribuir correctamente.",
+    type: "Markdown",
+    size: "—",
   },
-]
+];
 
 export function Papers() {
   return (
@@ -34,9 +34,7 @@ export function Papers() {
     >
       <div className="max-w-6xl mx-auto">
         <motion.div variants={fadeUp} className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">
-            Papers
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">Papers</h2>
           <p className="text-text-muted max-w-2xl mx-auto text-lg">
             Documentación compartida entre equipos. Próximamente disponible.
           </p>
@@ -65,7 +63,9 @@ export function Papers() {
               <h3 className="font-semibold text-text mb-2">{title}</h3>
               <p className="text-sm text-text-muted leading-relaxed mb-4">{desc}</p>
               <div className="flex items-center justify-between">
-                <span className="text-xs text-text-muted">{type} · {size}</span>
+                <span className="text-xs text-text-muted">
+                  {type} · {size}
+                </span>
                 <motion.span
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -81,10 +81,7 @@ export function Papers() {
           ))}
         </motion.div>
 
-        <motion.div
-          variants={fadeUp}
-          className="mt-12 text-center"
-        >
+        <motion.div variants={fadeUp} className="mt-12 text-center">
           <motion.a
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -100,5 +97,5 @@ export function Papers() {
         </motion.div>
       </div>
     </motion.section>
-  )
+  );
 }

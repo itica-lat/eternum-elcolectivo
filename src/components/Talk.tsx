@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
-import { MessageSquare, ExternalLink, Globe, BookOpen } from 'lucide-react'
-import { fadeUpItem, fadeUpStagger, scaleIn } from '../lib/animations'
+import { motion } from "framer-motion";
+import { MessageSquare, ExternalLink, Globe, BookOpen } from "lucide-react";
+import { fadeUpItem, fadeUpStagger, scaleIn } from "../lib/animations";
 
 export function Talk() {
   return (
@@ -27,23 +27,17 @@ export function Talk() {
             >
               La Charla
             </motion.h2>
-            <motion.p
-              variants={fadeUpItem}
-              className="text-text-muted leading-relaxed mb-6"
-            >
-              Todo el conocimiento circula a través de GitHub Discussions. Cada hilo
-              queda atribuido, fechado y sin edición retroactiva. Participá con preguntas,
-              resoluciones o ideas sobre arquitectura y proceso.
+            <motion.p variants={fadeUpItem} className="text-text-muted leading-relaxed mb-6">
+              Todo el conocimiento circula a través de GitHub Discussions. Cada hilo queda
+              atribuido, fechado y sin edición retroactiva. Participá con preguntas, resoluciones o
+              ideas sobre arquitectura y proceso.
             </motion.p>
-            <motion.ul
-              variants={fadeUpStagger}
-              className="space-y-3 mb-8"
-            >
+            <motion.ul variants={fadeUpStagger} className="space-y-3 mb-8">
               {[
-                'Razonamientos y decisiones de diseño',
-                'Errores encontrados y cómo se resolvieron',
-                'Preguntas técnicas abiertas',
-                'Ideas sobre arquitectura o proceso',
+                "Razonamientos y decisiones de diseño",
+                "Errores encontrados y cómo se resolvieron",
+                "Preguntas técnicas abiertas",
+                "Ideas sobre arquitectura o proceso",
               ].map((item) => (
                 <motion.li
                   key={item}
@@ -72,10 +66,7 @@ export function Talk() {
             </motion.a>
           </motion.div>
 
-          <motion.div
-            variants={scaleIn}
-            className="hidden lg:flex items-center justify-center"
-          >
+          <motion.div variants={scaleIn} className="hidden lg:flex items-center justify-center">
             <motion.div
               className="relative"
               animate={{ y: [0, -10, 0] }}
@@ -88,7 +79,10 @@ export function Talk() {
               </div>
               <motion.div
                 className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-surface-alt border border-white/5 flex items-center justify-center p-4"
-                animate={{ rotate: [0, 5, -5, 0], transition: { duration: 6, repeat: Infinity, ease: [0.42, 0, 0.58, 1] } }}
+                animate={{
+                  rotate: [0, 5, -5, 0],
+                  transition: { duration: 6, repeat: Infinity, ease: [0.42, 0, 0.58, 1] },
+                }}
               >
                 <div className="w-8 h-8" style={{ opacity: 0.4 }}>
                   <BookOpen className="w-full h-full text-primary" />
@@ -99,5 +93,5 @@ export function Talk() {
         </div>
       </div>
     </motion.section>
-  )
+  );
 }
