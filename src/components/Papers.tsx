@@ -71,8 +71,10 @@ export function Papers() {
                   whileInView={{ opacity: 1, x: 0 }}
                   className="text-xs text-primary flex items-center gap-1"
                 >
-                  <Download className="w-3 h-3" />
-                  Descargar
+                  <button className="flex hover:cursor-pointer hover:bg-green-400/20 p-2 rounded-lg">
+                    <Download className="w-3 h-3 mr-1" />
+                    Descargar
+                  </button>
                 </motion.span>
               </div>
             </motion.div>

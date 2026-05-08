@@ -17,8 +17,8 @@ export function Footer() {
         >
           <motion.div variants={fadeUpItem}>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-6 h-6 rounded border border-primary flex items-center justify-center">
-                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+              <div className="w-6 h-6 rounded flex items-center justify-center">
+                <img src="/img/logo-alt.png" alt="El Colectivo Logo" />
               </div>
               <span className="font-semibold text-text">El Colectivo</span>
             </div>

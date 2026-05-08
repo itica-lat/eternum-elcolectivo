@@ -20,7 +20,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.42, 0, 0.58, 1] }}
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium mb-8"
         >
           <BookOpen className="w-4 h-4" />
@@ -30,7 +30,7 @@ export function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.42, 0, 0.58, 1] }}
           className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text leading-tight mb-6"
         >
           El Colectivo
@@ -39,7 +39,7 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
+          transition={{ duration: 0.7, delay: 0.35, ease: [0.42, 0, 0.58, 1] }}
           className="text-lg sm:text-xl text-text-muted leading-relaxed mb-10 max-w-xl mx-auto"
         >
           Un espacio donde los equipos del proyecto SGRSI 2026 documentan errores, decisiones técnicas y procesos de razonamiento. No soluciones. Registro de cómo se llegó a ellas.
@@ -48,7 +48,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
+          transition={{ duration: 0.7, delay: 0.5, ease: [0.42, 0, 0.58, 1] }}
           className="flex flex-wrap items-center justify-center gap-4"
         >
           <a

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Mail, GitBranch, MapPin, Send } from 'lucide-react'
 import { fadeUp, fadeUpStagger, fadeUpItem } from '../lib/animations'
+import { p } from 'framer-motion/client'
 
 export function Contact() {
   return (
@@ -33,10 +34,10 @@ export function Contact() {
               className="space-y-4"
             >
               {[
-                { icon: Mail, label: 'Email', value: 'colectivo@eternum.lat' },
-                { icon: GitBranch, label: 'GitHub', value: 'github.com/itica-lat/eternum-elcolectivo' },
-                { icon: MapPin, label: 'Ubicación', value: 'BT Informática 2026 · CETP' },
-              ].map(({ icon: Icon, label, value }) => (
+                { icon: Mail, label: 'Email', type: 'email', value: 'colectivo@eternum.lat' },
+                { icon: GitBranch, label: 'GitHub', type: 'url', value: 'https://github.com/itica-lat/eternum-elcolectivo', display: 'github.com/itica-lat/eternum-elcolectivo' },
+                { icon: MapPin, label: 'Ubicación', type: 'text', value: 'Montevideo · Uruguay' },
+              ].map(({ icon: Icon, label, type, value, display }) => (
                 <motion.div
                   key={label}
                   variants={fadeUpItem}
@@ -44,14 +45,21 @@ export function Contact() {
                   className="flex items-center gap-3"
                 >
                   <motion.div
-                    whileHover={{ rotate: 360, transition: { duration: 0.5 } }}
                     className="w-9 h-9 rounded-lg bg-surface-alt flex items-center justify-center shrink-0"
                   >
                     <Icon className="w-4 h-4 text-primary" />
                   </motion.div>
-                  <div>
+                  <div className='contact-way'>
                     <p className="text-xs text-text-muted">{label}</p>
-                    <p className="text-sm text-text">{value}</p>
+                    <a
+                      href={type === 'email' ? `mailto:${value}` : value}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-utm-source="colectivo-website"
+                      className="text-sm text-text hover:text-primary transition-colors"
+                    >
+                      {display || value}
+                    </a>
                   </div>
                 </motion.div>
               ))}

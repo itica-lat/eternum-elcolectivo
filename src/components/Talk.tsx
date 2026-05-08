@@ -79,7 +79,7 @@ export function Talk() {
             <motion.div
               className="relative"
               animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              transition={{ duration: 4, repeat: Infinity, ease: [0.42, 0, 0.58, 1] }}
             >
               <div className="w-64 h-64 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center">
                 <div className="w-24 h-24" style={{ opacity: 0.3 }}>
@@ -88,7 +88,7 @@ export function Talk() {
               </div>
               <motion.div
                 className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-surface-alt border border-white/5 flex items-center justify-center p-4"
-                animate={{ rotate: [0, 5, -5, 0], transition: { duration: 6, repeat: Infinity } }}
+                animate={{ rotate: [0, 5, -5, 0], transition: { duration: 6, repeat: Infinity, ease: [0.42, 0, 0.58, 1] } }}
               >
                 <div className="w-8 h-8" style={{ opacity: 0.4 }}>
                   <BookOpen className="w-full h-full text-primary" />

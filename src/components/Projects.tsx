@@ -45,10 +45,9 @@ export function Projects() {
             >
               <div className="flex items-center gap-3">
                 <motion.div
-                  whileHover={{ rotate: 360, transition: { duration: 0.6 } }}
                   className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm group-hover:bg-primary/20 transition-colors shrink-0"
                 >
-                  {name[0]}
+                  <p>{name[0]}</p>
                 </motion.div>
                 <div>
                   <h3 className="font-semibold text-text text-sm">{name}</h3>

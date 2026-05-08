@@ -37,6 +37,18 @@ body {
   }
 }
 
+button {
+  @apply cursor-pointer transition-colors duration-300;
+}
+
+p, h1, h2, h3, h4, h5, h6, a {
+  @apply select-none;
+}
+
+.contact-way-value {
+  @apply select-text
+}
+
 .animate-fade-up {
   animation: fade-in-up 0.6s ease-out forwards;
 }
