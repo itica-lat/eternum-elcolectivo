@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Mail, GitBranch, MapPin, Send } from 'lucide-react'
 import { fadeUp, fadeUpStagger, fadeUpItem } from '../lib/animations'
-import { p } from 'framer-motion/client'
 
 export function Contact() {
   return (
