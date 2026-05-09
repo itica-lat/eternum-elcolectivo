@@ -17,12 +17,14 @@ export function Projects() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-alt/30"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-mid/3"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div variants={fadeUp} className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">Equipos participantes</h2>
-          <p className="text-text-muted max-w-2xl mx-auto text-lg">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
+            Equipos participantes
+          </h2>
+          <p className="text-text-secondary max-w-2xl mx-auto text-lg">
             Los equipos del BT Informática 2026 que construyen esta red de conocimiento
           </p>
         </motion.div>
@@ -39,15 +41,15 @@ export function Projects() {
               key={name}
               variants={fadeUpItem}
               whileHover={{ y: -3, scale: 1.02 }}
-              className="group p-5 rounded-xl bg-surface border border-white/5 hover:border-primary/20 transition-colors duration-300"
+              className="group p-5 rounded-xl bg-surface border border-border hover:border-bright/20 transition-colors duration-300"
             >
               <div className="flex items-center gap-3">
-                <motion.div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm group-hover:bg-primary/20 transition-colors shrink-0">
+                <motion.div className="w-10 h-10 rounded-full bg-mid/10 flex items-center justify-center text-mid font-bold text-sm group-hover:bg-mid/20 transition-colors shrink-0">
                   <p>{name[0]}</p>
                 </motion.div>
                 <div>
-                  <h3 className="font-semibold text-text text-sm">{name}</h3>
-                  <p className="text-xs text-text-muted">{role}</p>
+                  <h3 className="font-semibold text-text-primary text-sm">{name}</h3>
+                  <p className="text-xs text-text-secondary">{role}</p>
                 </div>
               </div>
             </motion.div>

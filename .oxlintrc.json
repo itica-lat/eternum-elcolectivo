@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/crates/oxc_linter/src/rules.rs",
+  "plugins": ["react", "typescript", "unicorn"],
+  "env": {
+    "browser": true,
+    "es2022": true
+  },
+  "rules": {
+    "no-unused-vars": "error",
+    "no-console": "warn",
+    "no-debugger": "error",
+    "eqeqeq": "error",
+    "prefer-const": "error",
+    "no-var": "error",
+    "typescript/no-explicit-any": "error",
+    "typescript/no-non-null-assertion": "warn",
+    "typescript/consistent-type-imports": "error",
+    "react/react-in-jsx-scope": "off"
+  },
+  "ignorePatterns": ["dist/**", "node_modules/**", "*.generated.ts"]
+}

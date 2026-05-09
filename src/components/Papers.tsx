@@ -30,12 +30,12 @@ export function Papers() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-alt/30"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-mid/3"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div variants={fadeUp} className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">Papers</h2>
-          <p className="text-text-muted max-w-2xl mx-auto text-lg">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">Papers</h2>
+          <p className="text-text-secondary max-w-2xl mx-auto text-lg">
             Documentación compartida entre equipos. Próximamente disponible.
           </p>
         </motion.div>
@@ -52,24 +52,24 @@ export function Papers() {
               key={title}
               variants={fadeUpItem}
               whileHover={{ y: -5, scale: 1.01 }}
-              className="group p-6 rounded-2xl bg-surface border border-white/5 hover:border-primary/20 transition-colors duration-300"
+              className="group p-6 rounded-2xl bg-surface-raised border border-border hover:border-bright/20 transition-colors duration-300"
             >
               <motion.div
                 whileHover={{ rotate: [0, -15, 15, 0], transition: { duration: 0.5 } }}
-                className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors"
+                className="w-10 h-10 rounded-xl bg-mid/10 flex items-center justify-center mb-4 group-hover:bg-mid/20 transition-colors"
               >
-                <FileText className="w-5 h-5 text-primary" />
+                <FileText className="w-5 h-5 text-mid" />
               </motion.div>
-              <h3 className="font-semibold text-text mb-2">{title}</h3>
-              <p className="text-sm text-text-muted leading-relaxed mb-4">{desc}</p>
+              <h3 className="font-semibold text-text-primary mb-2">{title}</h3>
+              <p className="text-sm text-text-secondary leading-relaxed mb-4">{desc}</p>
               <div className="flex items-center justify-between">
-                <span className="text-xs text-text-muted">
+                <span className="text-xs text-text-secondary">
                   {type} · {size}
                 </span>
                 <motion.span
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  className="text-xs text-primary flex items-center gap-1"
+                  className="text-xs text-bright flex items-center gap-1"
                 >
                   <button className="flex hover:cursor-pointer hover:bg-green-400/20 p-2 rounded-lg">
                     <Download className="w-3 h-3 mr-1" />
@@ -88,7 +88,7 @@ export function Papers() {
             href="https://github.com/itica-lat/eternum-elcolectivo"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-surface-alt text-text hover:bg-surface-alt transition-colors duration-200"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-text-primary hover:bg-mid/5 transition-colors duration-200"
           >
             <Search className="w-5 h-5" />
             Explorar el repositorio

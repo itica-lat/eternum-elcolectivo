@@ -31,8 +31,10 @@ export function About() {
     >
       <div className="max-w-6xl mx-auto">
         <motion.div variants={fadeUp} className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">Sobre El Colectivo</h2>
-          <p className="text-text-muted max-w-2xl mx-auto text-lg">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
+            Sobre El Colectivo
+          </h2>
+          <p className="text-text-secondary max-w-2xl mx-auto text-lg">
             BT Informática 2026 · El Colectivo · Eternum
           </p>
         </motion.div>
@@ -49,17 +51,17 @@ export function About() {
               key={title}
               variants={fadeUpItem}
               whileHover={{ y: -4, scale: 1.01 }}
-              className="group p-6 rounded-2xl bg-surface-alt/50 border border-white/5 hover:border-primary/20 transition-colors duration-300"
+              className="group p-6 rounded-2xl bg-surface-raised border border-border hover:border-bright/20 transition-colors duration-300"
             >
               <motion.div
                 initial={{ rotate: 0 }}
                 whileHover={{ rotate: [0, -10, 10, -5, 0], transition: { duration: 0.4 } }}
-                className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors"
+                className="w-10 h-10 rounded-xl bg-mid/10 flex items-center justify-center mb-4 group-hover:bg-mid/20 transition-colors"
               >
-                <Icon className="w-5 h-5 text-primary" />
+                <Icon className="w-5 h-5 text-mid" />
               </motion.div>
-              <h3 className="text-lg font-semibold text-text mb-2">{title}</h3>
-              <p className="text-sm text-text-muted leading-relaxed">{text}</p>
+              <h3 className="text-lg font-semibold text-text-primary mb-2">{title}</h3>
+              <p className="text-sm text-text-secondary leading-relaxed">{text}</p>
             </motion.div>
           ))}
         </motion.div>

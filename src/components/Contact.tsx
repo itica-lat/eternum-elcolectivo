@@ -16,11 +16,11 @@ export function Contact() {
           <motion.div variants={fadeUpStagger}>
             <motion.h2
               variants={fadeUpItem}
-              className="text-3xl sm:text-4xl font-bold text-text mb-4"
+              className="text-3xl sm:text-4xl font-bold text-text-primary mb-4"
             >
               Contacto
             </motion.h2>
-            <motion.p variants={fadeUpItem} className="text-text-muted leading-relaxed mb-8">
+            <motion.p variants={fadeUpItem} className="text-text-secondary leading-relaxed mb-8">
               ¿Querés sumar tu equipo a El Colectivo? Escribinos. Las decisiones de acceso se toman
               por votación entre los coordinadores de todos los grupos activos.
             </motion.p>
@@ -35,7 +35,13 @@ export function Contact() {
                   value: "https://github.com/itica-lat/eternum-elcolectivo",
                   display: "github.com/itica-lat/eternum-elcolectivo",
                 },
-                { icon: MapPin, label: "Ubicación", type: "text", value: "Montevideo · Uruguay" },
+                {
+                  icon: MapPin,
+                  label: "Ubicación",
+                  type: "url",
+                  value: "https://maps.google.com/?q=Montevideo,+Uruguay",
+                  display: "Montevideo, Uruguay",
+                },
               ].map(({ icon: Icon, label, type, value, display }) => (
                 <motion.div
                   key={label}
@@ -43,17 +49,17 @@ export function Contact() {
                   whileHover={{ x: 4 }}
                   className="flex items-center gap-3"
                 >
-                  <motion.div className="w-9 h-9 rounded-lg bg-surface-alt flex items-center justify-center shrink-0">
-                    <Icon className="w-4 h-4 text-primary" />
+                  <motion.div className="w-9 h-9 rounded-lg bg-mid/10 flex items-center justify-center shrink-0">
+                    <Icon className="w-4 h-4 text-mid" />
                   </motion.div>
                   <div className="contact-way">
-                    <p className="text-xs text-text-muted">{label}</p>
+                    <p className="text-xs text-text-secondary">{label}</p>
                     <a
                       href={type === "email" ? `mailto:${value}` : value}
                       target="_blank"
                       rel="noopener noreferrer"
                       data-utm-source="colectivo-website"
-                      className="text-sm text-text hover:text-primary transition-colors"
+                      className="text-sm text-text-primary hover:text-bright transition-colors"
                     >
                       {display || value}
                     </a>
@@ -69,32 +75,35 @@ export function Contact() {
             whileInView="visible"
             viewport={{ once: true }}
             onSubmit={(e) => e.preventDefault()}
-            className="space-y-4 p-6 rounded-2xl bg-surface-alt/50 border border-white/5"
+            className="space-y-4 p-6 rounded-2xl bg-surface-raised border border-border"
           >
             {[
               { id: "name", label: "Nombre", type: "text", placeholder: "Tu nombre o equipo" },
               { id: "email", label: "Email", type: "email", placeholder: "tu@email.com" },
             ].map(({ id, label, type, placeholder }) => (
               <motion.div key={id} whileFocus={{ scale: 1.01 }}>
-                <label htmlFor={id} className="block text-sm font-medium text-text mb-1.5">
+                <label htmlFor={id} className="block text-sm font-medium text-text-primary mb-1.5">
                   {label}
                 </label>
                 <input
                   type={type}
                   id={id}
-                  className="w-full px-4 py-2.5 rounded-xl bg-surface border border-white/10 text-text text-sm placeholder:text-text-muted/50 focus:outline-none focus:border-primary/50 transition-colors"
+                  className="w-full px-4 py-2.5 rounded-xl bg-surface border border-border text-text-primary text-sm placeholder:text-text-secondary/50 focus:outline-none focus:border-bright/50 transition-colors"
                   placeholder={placeholder}
                 />
               </motion.div>
             ))}
             <motion.div whileFocus={{ scale: 1.01 }}>
-              <label htmlFor="message" className="block text-sm font-medium text-text mb-1.5">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-text-primary mb-1.5"
+              >
                 Mensaje
               </label>
               <textarea
                 id="message"
                 rows={4}
-                className="w-full px-4 py-2.5 rounded-xl bg-surface border border-white/10 text-text text-sm placeholder:text-text-muted/50 focus:outline-none focus:border-primary/50 transition-colors resize-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-surface border border-border text-text-primary text-sm placeholder:text-text-secondary/50 focus:outline-none focus:border-bright/50 transition-colors resize-none"
                 placeholder="Contanos sobre tu equipo..."
               />
             </motion.div>
@@ -102,7 +111,7 @@ export function Contact() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary text-surface font-semibold hover:bg-primary/90 transition-colors duration-200"
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-mid text-white font-semibold hover:bg-mid/90 transition-colors duration-200"
             >
               <Send className="w-4 h-4" />
               Enviar mensaje

@@ -1,7 +1,10 @@
 {
-  "$schema": "./node_modules/oxfmt/configuration_schema.json",
-  "lineWidth": 100,
-  "indentStyle": "space",
-  "indentWidth": 2,
-  "ignorePatterns": []
+  "options": {
+    "indent_style": "tab",
+    "indent_width": 2,
+    "line_width": 100,
+    "quote_style": "double",
+    "semicolons": "always",
+    "trailing_commas": "all"
+  }
 }

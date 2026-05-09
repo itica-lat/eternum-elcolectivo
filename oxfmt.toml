@@ -1,0 +1,6 @@
+quote_style = "double"
+semicolons = "always"
+indent_style = "tab"
+indent_width = 2
+line_width = 100
+trailing_commas = "all"

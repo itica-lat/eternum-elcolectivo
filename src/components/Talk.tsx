@@ -16,18 +16,18 @@ export function Talk() {
           <motion.div variants={fadeUpStagger}>
             <motion.div
               variants={fadeUpItem}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-bright/20 bg-bright/5 text-bright text-sm font-medium mb-6"
             >
               <MessageSquare className="w-4 h-4" />
               GitHub Discussions
             </motion.div>
             <motion.h2
               variants={fadeUpItem}
-              className="text-3xl sm:text-4xl font-bold text-text mb-4"
+              className="text-3xl sm:text-4xl font-bold text-text-primary mb-4"
             >
               La Charla
             </motion.h2>
-            <motion.p variants={fadeUpItem} className="text-text-muted leading-relaxed mb-6">
+            <motion.p variants={fadeUpItem} className="text-text-secondary leading-relaxed mb-6">
               Todo el conocimiento circula a través de GitHub Discussions. Cada hilo queda
               atribuido, fechado y sin edición retroactiva. Participá con preguntas, resoluciones o
               ideas sobre arquitectura y proceso.
@@ -42,10 +42,10 @@ export function Talk() {
                 <motion.li
                   key={item}
                   variants={fadeUpItem}
-                  className="flex items-start gap-2 text-sm text-text-muted"
+                  className="flex items-start gap-2 text-sm text-text-secondary"
                 >
                   <motion.div
-                    className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"
+                    className="w-1.5 h-1.5 rounded-full bg-bright mt-2 shrink-0"
                     whileHover={{ scale: 2 }}
                   />
                   {item}
@@ -59,7 +59,7 @@ export function Talk() {
               href="https://github.com/itica-lat/eternum-elcolectivo/discussions"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-surface font-semibold hover:bg-primary/90 transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-mid text-white font-medium hover:bg-mid/90 transition-colors duration-200"
             >
               Ir a la Charla
               <ExternalLink className="w-4 h-4" />
@@ -72,20 +72,20 @@ export function Talk() {
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: [0.42, 0, 0.58, 1] }}
             >
-              <div className="w-64 h-64 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center">
+              <div className="w-64 h-64 rounded-full bg-bright/5 border border-bright/10 flex items-center justify-center">
                 <div className="w-24 h-24" style={{ opacity: 0.3 }}>
-                  <Globe className="w-full h-full text-primary" />
+                  <Globe className="w-full h-full text-bright" />
                 </div>
               </div>
               <motion.div
-                className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-surface-alt border border-white/5 flex items-center justify-center p-4"
+                className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-surface-raised border border-border flex items-center justify-center p-4"
                 animate={{
                   rotate: [0, 5, -5, 0],
                   transition: { duration: 6, repeat: Infinity, ease: [0.42, 0, 0.58, 1] },
                 }}
               >
                 <div className="w-8 h-8" style={{ opacity: 0.4 }}>
-                  <BookOpen className="w-full h-full text-primary" />
+                  <BookOpen className="w-full h-full text-bright" />
                 </div>
               </motion.div>
             </motion.div>
