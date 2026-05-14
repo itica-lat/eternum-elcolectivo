@@ -70,7 +70,7 @@ export function Projects() {
                   className={`w-10 h-10 ${roundeness === "full" ? "rounded-full" : "rounded-" + roundeness} bg-mid/10 flex items-center justify-center text-mid font-bold text-sm group-hover:bg-mid/20 transition-colors shrink-0`}
                   style={{ backgroundColor: color + "60" }}
                 >
-                  <img src={logo} alt={name} />
+                  <img src={logo === undefined ? `${name[0]}` : logo} alt={name} />
                 </motion.div>
                 <div>
                   <h3 className="font-semibold text-text-primary text-sm">{name}</h3>
