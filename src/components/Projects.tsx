@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { fadeUp, fadeUpStagger, fadeUpItem } from "../lib/animations";
 
-import LogoEternum from "@public/img/equipos/Eternum_Logo_Alt.png";
-import LogoDataMiners from "@public/img/equipos/DataMiners_Logo_Alt.png";
-import LogoPixelMind from "@public/img/equipos/PixelMind_Logo.png";
+import LogoEternum from "@/img/equipos/Eternum_Logo_Alt.png";
+import LogoDataMiners from "@/img/equipos/DataMiners_Logo_Alt.png";
+import LogoPixelMind from "@/img/equipos/PixelMind_Logo.png";
 
 const teams = [
   {
